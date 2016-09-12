@@ -7,18 +7,45 @@
     tools:context="aggiecelina.cafeteria.MainActivity">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/happy_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
+        android:layout_height="60dp"
         android:background="#C0C0C0"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:text="Happy Hours?"
+            android:textSize="25sp" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textOff="It's OFF"
+            android:textOn="It's ON"
+
+            />
+    </RelativeLayout>
+
 
     <LinearLayout
         android:id="@+id/coffee_layout"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="200dp"
+        android:baselineAligned="false"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
 
         <RelativeLayout
             android:layout_width="0dp"
@@ -28,8 +55,8 @@
 
             <ImageButton
                 android:id="@+id/coffee"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/coffee" />
 
@@ -37,10 +64,11 @@
                 android:id="@+id/coffee_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5 PLN"
-                android:textSize="30sp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@id/coffee"
+                android:layout_centerVertical="true"
+                android:text="5 PLN"
+                android:textSize="30sp" />
 
 
         </RelativeLayout>
@@ -53,19 +81,21 @@
 
             <ImageButton
 
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/coffee_2" />
+                android:src="@drawable/coffee_2"
+                android:id="@+id/coffee_2"/>
 
             <TextView
                 android:id="@+id/coffe_2_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10 PLN"
-                android:textSize="30sp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:layout_below="@id/coffee_2"
+                android:text="10 PLN"
+                android:textSize="30sp" />
 
         </RelativeLayout>
 
@@ -75,7 +105,12 @@
         android:id="@+id/ice_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="horizontal">
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
 
         <RelativeLayout
             android:layout_width="0dp"
@@ -85,10 +120,19 @@
 
             <ImageButton
 
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ice" />
+                android:src="@drawable/ice"
+                android:id="@+id/ice_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="15 PLN"
+                android:textSize="30sp"
+                android:layout_below="@id/ice_image" />
 
 
         </RelativeLayout>
@@ -100,11 +144,20 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/coffee_2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:id="@+id/tea"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/tea" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:text="20 PLN"
+                android:textSize="30sp"
+                android:layout_below="@id/tea"/>
         </RelativeLayout>
 
 
@@ -113,21 +166,22 @@
     <LinearLayout
         android:id="@+id/suma_layout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
+        android:layout_height="70dp"
         android:background="#C0C0C0"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
 
-    <TextView
-        android:id="@+id/basket"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:text="0"
-        android:textSize="60sp"
-        android:textAlignment="center"
-        android:layout_gravity="right" />
+        <TextView
+            android:id="@+id/basket"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="50sp" />
     </LinearLayout>
-
 
 
 </LinearLayout>
