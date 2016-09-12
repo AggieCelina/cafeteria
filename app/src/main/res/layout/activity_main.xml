@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="aggiecelina.cafeteria.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/happy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#C0C0C0"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/coffee_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/coffee"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coffee" />
+
+            <TextView
+                android:id="@+id/coffee_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 PLN"
+                android:textSize="30sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coffee_2" />
+
+            <TextView
+                android:id="@+id/coffe_2_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 PLN"
+                android:textSize="30sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ice" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/coffee_2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tea" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/suma_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#C0C0C0"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/basket"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="0"
+        android:textSize="60sp"
+        android:textAlignment="center"
+        android:layout_gravity="right" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
