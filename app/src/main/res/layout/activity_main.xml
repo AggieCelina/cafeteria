@@ -32,6 +32,7 @@
             android:layout_centerVertical="true"
             android:textOff="It's OFF"
             android:textOn="It's ON"
+            android:id="@+id/happy_hours"
 
             />
     </RelativeLayout>
@@ -40,7 +41,8 @@
     <LinearLayout
         android:id="@+id/coffee_layout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:baselineAligned="false"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -48,21 +50,24 @@
         android:paddingBottom="@dimen/activity_vertical_margin">
 
         <RelativeLayout
+
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <ImageButton
                 android:id="@+id/coffee"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/coffee" />
+                android:src="@drawable/coffee"
+                android:onClick="selectCoffee"/>
 
             <TextView
                 android:id="@+id/coffee_price"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
+                android:textAlignment="center"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_below="@id/coffee"
@@ -74,22 +79,25 @@
         </RelativeLayout>
 
         <RelativeLayout
+
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <ImageButton
 
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/coffee_2"
-                android:id="@+id/coffee_2"/>
+                android:id="@+id/coffee_2"
+                android:onClick="selectCoffee2"/>
 
             <TextView
                 android:id="@+id/coffe_2_price"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
+                android:textAlignment="center"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerVertical="true"
@@ -104,7 +112,8 @@
     <LinearLayout
         android:id="@+id/ice_layout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:baselineAligned="false"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -114,21 +123,23 @@
 
         <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <ImageButton
 
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ice"
-                android:id="@+id/ice_image" />
+                android:id="@+id/ice_image"
+                android:onClick="selectIce"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:layout_alignParentBottom="true"
                 android:text="15 PLN"
                 android:textSize="30sp"
@@ -139,19 +150,21 @@
 
         <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <ImageButton
                 android:id="@+id/tea"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/tea" />
+                android:src="@drawable/tea"
+                android:onClick="selectTea"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
+                android:textAlignment="center"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerVertical="true"
@@ -163,7 +176,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/suma_layout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -180,10 +193,9 @@
             android:layout_gravity="right"
             android:text="0"
             android:textAlignment="center"
-            android:textSize="50sp" />
-    </LinearLayout>
+            android:textSize="50sp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
 
 </LinearLayout>
-
-
