@@ -33,6 +33,7 @@
             android:textOff="It's OFF"
             android:textOn="It's ON"
             android:id="@+id/happy_hours"
+            android:onClick="onClickHappyHours"
 
             />
     </RelativeLayout>

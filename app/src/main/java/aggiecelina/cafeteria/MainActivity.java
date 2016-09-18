@@ -1,10 +1,13 @@
 package aggiecelina.cafeteria;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     int ice_price = 15;
     int tea_price = 20;
     int total_counter = 0;
+
 
 
 
@@ -53,5 +57,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void onClickHappyHours(View view){
 
+    //pobieramy stan przycisku przelacznika:isChecked() zwraca true jezeli przycisk jest wlaczony
+    boolean on = ((ToggleButton) view).isChecked();
+        if(on) {
+            double discount = ((double)total_counter)/(-10);
+            double total_discounted = ((double)total_counter) + discount;
+
+            TextView basket = (TextView) findViewById(R.id.basket);
+            LinearLayout l1 = (LinearLayout) findViewById(R.id. coffee_layout);
+            LinearLayout l2 = (LinearLayout) findViewById(R.id. ice_layout);
+            basket.setText("" + total_discounted);
+            l1.setBackgroundColor(Color.YELLOW);
+            l2.setBackgroundColor(Color.YELLOW);
+
+        } else {
+
+            TextView basket = (TextView) findViewById(R.id.basket);
+            LinearLayout l1 = (LinearLayout) findViewById(R.id. coffee_layout);
+            LinearLayout l2 = (LinearLayout) findViewById(R.id. ice_layout);
+            l1.setBackgroundColor(Color.WHITE);
+            l2.setBackgroundColor(Color.WHITE);
+            basket.setText("" + total_counter);
+        }
+    }
 }
+
+
+
+
